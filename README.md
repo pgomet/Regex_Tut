@@ -51,7 +51,7 @@ The following elements are included in this regex:
 
 ### Character Classes
 
-* One can distinguish between various character types due to character classes. Our character classes for this regex are located in the "[]" and consist of "a-z" (which looks for characters between `a` and `z`), and `.` (which represents any single character but must be preceded by `/` within a character set to retain its meaning). Character classes typically only match one character out of a large number of characters, but because our expression employs the greedy match quantifier `+`, the regex is forced to match as much of the string as possible.
+* One can distinguish between various character types due to character classes. Our character classes for this regex are located in the `[]` and consist of `a-z` (which looks for characters between `a` and `z`), and `.` (which represents any single character but must be preceded by `/` within a character set to retain its meaning). Character classes typically only match one character out of a large number of characters, but because our expression employs the greedy match quantifier `+`, the regex is forced to match as much of the string as possible.
 
 ### Grouping and Capturing
 
