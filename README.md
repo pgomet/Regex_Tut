@@ -4,7 +4,16 @@ A collection of patterns known as a regular expression can be used to examine ch
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this tutorial, we'll look at a regex that may be applied to validate an email. Please refer to the regex below.
+
+* `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
+You could find that the regex resembles an ordinary email address if you look at it carefully. See the differences below.
+
+* `([a-z0-9_\.-]+)` + `@` + `([\da-z\.-]+)` + `\.([a-z\.]{2,6})`
+* `bob (username)` + `@` + `gmail (server name)` + `.com (top-level domain)`
+
+Let's examine the meanings of each character now that we can notice the commonalities.
 
 ## Table of Contents
 
