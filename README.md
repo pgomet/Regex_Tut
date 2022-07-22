@@ -1,4 +1,4 @@
-# Regex Tutorial
+# Regex Tutorial - Matching an Email
 
 A collection of patterns known as a regular expression, or regex for short, can be used to examine character combinations in strings. 
 
