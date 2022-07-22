@@ -29,9 +29,7 @@ Let's examine the meanings of each character now that we can notice the commonal
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [References](#references)
 
 ## Regex Components
 
@@ -60,19 +58,32 @@ The following elements are included in this regex:
 * There is one thing in our expression worth mentioning for this part `()`. Multiple tokens are grouped together and matched to a string using the symbol `()`. If a match occurs, it recalls that match. There are three unique capture groupings in our expression.
 
     * `([a-z0-9_\.-]+)` this corresponds to the username
-    * `([\da-z\.-]+)` which matches the server name.
-    * `([a-z\.]{2,6})` which matches the top-level domain.
+    * `([\da-z\.-]+)` this corresponds to the server name.
+    * `([a-z\.]{2,6})` this corresponds to the top-level domain.
 
 ### Bracket Expressions
 
+* The bracket phrase `[]` is used to specify a character range and to identify a character set. We can verify the characters for the groupings for username, server name, and top-level domain, correspondingly, due to three such character sets in our regex.
+
+    * `[a-z0-9_\.-]` for the username.
+    * `[\da-z\.-]` for the server name.
+    * `[a-z\.]` for the top-level domain.
+
 ### Greedy and Lazy Match
 
-### Boundaries
+* The regex used in this tutorial uses the `+` quantifier, which is a greedy match quantifier. Simply put, the regex will try to match as much of the string as it can in this case.
 
-### Back-references
+### References
 
-### Look-ahead and Look-behind
+* https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+* https://www.youtube.com/watch?v=7DG3kCDx53c&ab_channel=TheCodingTrain
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+* https://www.regular-expressions.info/quickstart.html
+* https://www.regular-expressions.info/tutorial.html
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I'm Pina Gomet and I'm a full-stack developer student at University of Connecticut's Coding Bootcamp.
+
+Check out my GitHub at:
+* [GitHub Profile](https://github.com/pgomet)
