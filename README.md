@@ -1,6 +1,12 @@
 # Regex Tutorial
 
-A collection of patterns known as a regular expression can be used to examine character combinations in strings. In this following lesson, I'll describe the various elements of the email validation regular expression (regex).
+A collection of patterns known as a regular expression, or regex for short, can be used to examine character combinations in strings. 
+
+Regex can be used to find patterns of characters within a string, to find/replace certain characters or a specific sequence of characters within a string, or just as a brain-teaser puzzle.
+
+Regex is most frequently used to validate user input. Email addresses, usernames, URLs, HTML tags, and more are a few examples.
+
+In this following lesson, I'll describe the various elements of the email validation regular expression (regex).
 
 ## Summary
 
@@ -19,9 +25,7 @@ Let's examine the meanings of each character now that we can notice the commonal
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
@@ -31,17 +35,33 @@ Let's examine the meanings of each character now that we can notice the commonal
 
 ## Regex Components
 
+The following elements are included in this regex:
+
+- Character set matching
+- Matching fields and groupings
+
 ### Anchors
+
+* Regex can match a position such as before, after, or between characters thanks to anchors. The `^` and `$` anchors are essentially used to mark the before and after of the regex in the email. This establishes where the regex match will appear.
 
 ### Quantifiers
 
-### OR Operator
+* A regex can determine the number of characters or expressions it needs to match due to quantifiers. We have two quantifiers in our regex: `+` and `{}`.
+
+    * The `+` instructs the regex to repeatedly match the item.
+    * the `{}` requests that the regex match "n" occurrences of the preceding item ("x"). This is expressed as follows: x n. In our regex this is used for `[a-z\.]{2,6}` which instructs the regex to match 2-6 characters with the `[a-z\.]` criteria.
 
 ### Character Classes
 
-### Flags
+* One can distinguish between various character types due to character classes. Our character classes for this regex are located in the "[]" and consist of "a-z" (which looks for characters between `a` and `z`), and `.` (which represents any single character but must be preceded by `/` within a character set to retain its meaning). Character classes typically only match one character out of a large number of characters, but because our expression employs the greedy match quantifier `+`, the regex is forced to match as much of the string as possible.
 
 ### Grouping and Capturing
+
+* There is one thing in our expression worth mentioning for this part `()`. Multiple tokens are grouped together and matched to a string using the symbol `()`. If a match occurs, it recalls that match. There are three unique capture groupings in our expression.
+
+    * `([a-z0-9_\.-]+)` this corresponds to the username
+    * `([\da-z\.-]+)` which matches the server name.
+    * `([a-z\.]{2,6})` which matches the top-level domain.
 
 ### Bracket Expressions
 
